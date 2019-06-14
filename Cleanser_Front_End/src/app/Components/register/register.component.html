@@ -1,0 +1,64 @@
+<app-navigation>
+  <section>
+    <div class="container" fxLayoutAlign="center" fxLayout.xs="column">
+      <div fxFlex="40%">
+        <mat-card align="center">
+          <mat-card-title>
+            <p class="head" fxLayoutAlign="center"><strong> Register </strong></p>
+          </mat-card-title>
+          <mat-card-content>
+            <form [formGroup]= "mainForm" (submit)="onRegisterSubmit(mainForm)">
+              <mat-form-field fxLayout="column">
+                <input matInput placeholder="First Name" type="text"  formControlName="firstName">
+                <mat-error *ngIf="mainForm.controls['firstName'].invalid && mainForm.controls['firstName'].touched">
+                  <mat-error *ngIf= "mainForm.controls['firstName'].errors.required">First Name is <strong>Required</strong></mat-error>
+                  <mat-error *ngIf= "mainForm.controls['firstName'].errors.pattern">First Name Must Not Have Whitespace Or Special Characters</mat-error>  
+                </mat-error>
+              </mat-form-field>
+    
+              <mat-form-field fxLayout="column">
+                <input matInput placeholder="Last Name" type="text" formControlName="lastName">
+                <mat-error *ngIf="mainForm.controls['lastName'].invalid && mainForm.controls['lastName'].touched">
+                  <mat-error *ngIf= "mainForm.controls['lastName'].errors.required">Last Name is <strong>Required</strong></mat-error>
+                  <mat-error *ngIf= "mainForm.controls['lastName'].errors.pattern">Last Name Must Not Have Whitespace Or Special Characters</mat-error>  
+                </mat-error>
+              </mat-form-field>
+    
+              <mat-form-field fxLayout="column">
+                <input matInput placeholder="Email" type="text" formControlName="email">
+                <mat-error *ngIf="mainForm.controls['email'].invalid && mainForm.controls['email'].touched">
+                  <mat-error *ngIf= "mainForm.controls['email'].errors.required">Email is <strong>Required</strong></mat-error>
+                  <mat-error *ngIf= "mainForm.controls['email'].errors.pattern">Email must be a valid Email Address</mat-error>  
+                </mat-error>
+              </mat-form-field>
+    
+              <mat-form-field fxLayout="column">
+                <input matInput placeholder="Password" type="password" formControlName="password" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="hide = !hide"> {{hide ? 'visibility_off': 'visibility'}} </mat-icon>
+                <mat-error *ngIf="mainForm.controls['password'].invalid && mainForm.controls['password'].touched">
+                  <mat-error *ngIf= "mainForm.controls['password'].errors.required">Password is Required</mat-error>
+                  <mat-error *ngIf= "mainForm.controls['password'].errors.minlength">Password must be at least 8 Characters Long</mat-error>  
+                  <mat-error *ngIf= "mainForm.controls['password'].errors.pattern">Password must Contain One Lower case, One Upper case and one digit Character</mat-error>        
+                </mat-error> 
+              </mat-form-field>
+    
+              <mat-form-field fxLayout="column">
+                <span matPrefix>+234 &nbsp;</span>
+                <input matInput placeholder="Phone Number" type="tel" formControlName="phone">
+                <mat-error *ngIf="mainForm.controls['phone'].invalid && mainForm.controls['phone'].touched">
+                  <mat-error *ngIf= "mainForm.controls['phone'].errors.required">Phone Number Is Required</mat-error>
+                  <mat-error *ngIf= "mainForm.controls['phone'].errors.minlength">Phone Number must be at least 10 Characters Long</mat-error>  
+                  <mat-error *ngIf= "mainForm.controls['phone'].errors.maxlength">Phone Number must be at least 10 Characters Long</mat-error>        
+                </mat-error> 
+              </mat-form-field>
+              <button mat-raised-button color="accent" class="login" [disabled]= "!mainForm.valid">Create Account</button>
+            </form>
+            <p fxLayoutAlign="center">Already Have An Account?</p>
+            <a routerLink="/login" fxLayoutAlign="center">Login</a>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+  <div style="height: 6em;"></div>
+</app-navigation>

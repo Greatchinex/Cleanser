@@ -1,0 +1,117 @@
+<app-navigation>
+    <section id="showcase">
+        <div class="container">
+            <h1 class="slogan animated fadeInUp delay-2s">We Pickup, We Clean, We Deliver...</h1>
+            <p class="sub-slogan animated fadeInUp delay-2s">Your Laundry Partner</p>
+            <button mat-raised-button color="accent" class="btn animated fadeInDown delay-3s" routerLink="/login">ORDER NOW</button>
+        </div>
+    </section>
+
+    <section style="margin-top: 5em;">
+        <h2 class="titles" fxLayoutAlign="center"> How We Work </h2>
+        <div class="container" fxLayout="row"  fxLayoutGap="1em" fxLayoutAlign="center" fxLayout.xs="column">
+            <div fxFlex="30%">
+                <mat-card align="center">
+                    <mat-card-title>
+                        <mat-icon>drive_eta</mat-icon>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <p class="desc"><strong>We Pick Up</strong></p>
+                        <p class="desc">Tell us where you are and when you'd like us to come get your laundry and we will be there! We promise to take good care of your laundry.</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div fxFlex="30%">
+                <mat-card align="center">
+                    <mat-card-title>
+                        <mat-icon>local_laundry_service</mat-icon>
+                    </mat-card-title>
+                    <mat-card-content>
+                            <p class="desc"><strong>We Clean</strong></p>
+                        <p class="desc">We take absolute care of your laundry and dry cleaning. For that reason, your laundry is treated to the highest quality service.</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div fxFlex="30%">
+                <mat-card align="center">
+                    <mat-card-title>
+                        <mat-icon>business_center</mat-icon>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <p class="desc"><strong>We Deliver</strong></p>
+                        <p class="desc">Your laundry will certainly be delivered to you on time. Our valets will be at your doorstep to hand over your laundry cleaned and sparkling</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="margin-top: 5em;">
+        <div class="container" fxLayout="row"  fxLayoutGap="2em" fxLayoutAlign="center" fxLayout.xs="column">
+            <div fxFlex="45%">
+                <img src="../../../assets/images/laundry.jpeg" class="img">
+            </div>
+            <div fxFlex="45%">
+                <h2 fxLayoutAlign="center" class="titles">About Us</h2>
+            <p fxLayoutAlign="center">  
+                Cleanser provides premium quality laundry and dry cleaning services through easy web interface.
+                We pick up your dirty laundry from your doorstep and deliver clean clothes with fresh breeze back to you. LaundyApp is an affordable and 
+                convenient way of getting rid of your laundry problems.
+            </p>
+            <p fxLayoutAlign="center">
+                Our premium machines and experienced staff makes sure to provide the best services to you. 
+                We do laundry with antiseptic wash, fabric softener and hygienic detergents. 
+                Try LaundyApp by scheduling the pickup and get your laundry and dry clean at the tap of a button.
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="margin-top: 5em;">
+        <div class="container" fxLayout="row"  fxLayoutGap="2em" fxLayoutAlign="center" fxLayout.xs="column">
+            <div fxFlex="45%">
+                <form style="position:relative; top: 1.5em;" [formGroup]="mainForm">
+                    <mat-form-field fxLayout="column">
+                        <input matInput placeholder="E-mail" formControlName="email" type="text">
+                        <mat-error *ngIf="mainForm.controls['email'].invalid && mainForm.controls['email'].touched" class="alert">
+                            <mat-error *ngIf= "mainForm.controls['email'].errors.required">Email is Required</mat-error>
+                            <mat-error *ngIf= "mainForm.controls['email'].errors.pattern">Email must be a valid Email Address</mat-error>      
+                        </mat-error> 
+                    </mat-form-field>
+                    <mat-form-field fxLayout="column">
+                        <textarea matInput placeholder="Message" formControlName="message"></textarea>
+                        <mat-error *ngIf="mainForm.controls['message'].invalid && mainForm.controls['message'].touched" class="alert">
+                            Please Type a Message
+                        </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button color="accent" class="send">Send</button>
+                </form>
+            </div>
+            <div fxFlex="45%">
+                <h3 fxLayoutAlign="center" class="titles">CONTACT US</h3>
+                <p>We are always glad to hear from you. Your feedbacks And suggestions mean a lot to Us.</p>
+                <ul>
+                    <li fxLayout="row" fxLayoutGap="2em">
+                        <div>
+                            <mat-icon>phone</mat-icon>
+                        </div>
+                        <div class="reach">
+                            <p><strong> Call Us </strong></p>
+                            <p>+234-8109871749</p>
+                        </div>
+                    </li>
+                    <li fxLayout="row" fxLayoutGap="2em">
+                        <div>
+                            <mat-icon>email</mat-icon>
+                        </div>
+                        <div class="reach">
+                            <p><strong> Write Us </strong></p>
+                            <p>GreatChinex@gmail.com</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</app-navigation>

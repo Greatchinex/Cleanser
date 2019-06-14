@@ -1,0 +1,78 @@
+.boxes {
+    margin-top: 3em;
+}
+
+.item {
+    font-weight:lighter;
+}
+
+.number {
+    padding: 5px 15px 1px 15px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    color: #ffaa00;
+    line-height: 1;
+    font-size: 1.45em;
+}
+  
+.price {
+    border-radius: 4px 4px ;
+    border: solid 1px #cacaca;
+    /* border-left: none; */
+    line-height: 30px;
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    font-size: 1.30em;
+    margin: 0 auto;
+}
+  
+.btn {
+    background: #4FBBBC;
+    color: #fff;
+    font-weight: bolder; 
+    font-size: 1em;
+}
+  
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .5s;
+}
+ 
+/* .cart {
+    z-index: 30000;
+    height: 72px;
+    width: 72px;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #fff;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 6px 0;
+    position: fixed;
+    bottom: 70px;
+    right: 3%;
+} */
+
+mat-icon {
+    font-size: 2em;
+    color: #e91e51;
+}
+
+.bt:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.bt {
+    background: #4FBBBC;
+    position: fixed;
+    bottom: 70px;
+    right: 2%;
+    z-index: 30000;
+}
+
+.txt {
+    font-weight: bold;
+}

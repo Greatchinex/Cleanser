@@ -1,0 +1,146 @@
+<app-navigation>
+<mat-tab-group mat-align-tabs="center">
+  <!-- Tabs For Men -->
+  <mat-tab label="Men">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-3 mt-5" *ngFor="let men of mensP; let i = index"> -->
+          <mat-card align="center" class="col-md-3 col-sm-12 mt-5 cards" *ngFor="let men of mensP; let i = index">
+            <mat-card-title>
+              <div style="background:url(../../../assets/images/categories/men/packet_shirt.jpg);background-size: cover;background-repeat: no-repeat;background-position: center center;display: block; width: 100%;height: 150px;margin: 0 auto;"></div>
+            </mat-card-title>
+            <mat-card-content>
+              <h2 style="font-weight:lighter;">{{ men.name }}</h2>
+              <p> {{ men.description }} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn" (click)="removeMenNumber(i)">-</button>
+              <span class="number"> {{ men.value }} </span>
+              <button mat-button class="btn" (click)="addMenNumber(i)">+</button>
+              <span class="price">₦{{ men.price }}</span>
+            </mat-card-actions>
+          </mat-card>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- So Card Bottom Can show -->
+    <div style="margin-top:1em;"></div>
+  </mat-tab>
+
+  <!-- Tabs for women -->
+  <mat-tab label="Women">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-3 mt-5" *ngFor="let men of mensP; let i = index"> -->
+          <mat-card align="center" class="col-md-3 col-sm-12 mt-5 cards" *ngFor="let women of womenP; let i = index">
+            <mat-card-title>
+              <div style="background:url(../../../assets/images/categories/women/t-shirt.jpg);background-size: cover;background-repeat: no-repeat;background-position: center center;display: block; width: 100%;height: 150px;margin: 0 auto;"></div>
+            </mat-card-title>
+            <mat-card-content>
+              <h2 style="font-weight:lighter;">{{ women.name }}</h2>
+              <p> {{ women.description }} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn" (click)="removeWomenNumber(i);">-</button>
+              <span class="number"> {{ women.value }} </span>
+              <button mat-button class="btn" (click)="addWomenNumber(i);">+</button>
+              <span class="price">₦{{ women.price }}</span>
+            </mat-card-actions>
+          </mat-card>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- So Card Bottom Can show -->
+    <div style="margin-top:1em;"></div>
+  </mat-tab>
+
+  <!-- Tabs For Girls -->
+  <mat-tab label="Girls">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-3 mt-5" *ngFor="let men of mensP; let i = index"> -->
+          <mat-card align="center" class="col-md-3 col-sm-12 mt-5 cards" *ngFor="let girl of girlsP; let i = index">
+            <mat-card-title>
+              <div style="background:url(../../../assets/images/categories/girls/shirt_tops.jpeg);background-size: cover;background-repeat: no-repeat;background-position: center center;display: block; width: 100%;height: 150px;margin: 0 auto;"></div>
+            </mat-card-title>
+            <mat-card-content>
+              <h2 style="font-weight:lighter;">{{ girl.name }}</h2>
+              <p> {{ girl.description }} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn" (click)="removeGirlNumber(i);">-</button>
+              <span class="number"> {{ girl.value }} </span>
+              <button mat-button class="btn" (click)="addGirlNumber(i);">+</button>
+              <span class="price">₦{{ girl.price }}</span>
+            </mat-card-actions>
+          </mat-card>
+        <!-- </div> -->
+      </div>
+    </div>    
+    <!-- So Card Bottom Can show -->
+    <div style="margin-top:1em;"></div>
+  </mat-tab>
+
+  <!-- Tabs For Boys -->
+  <mat-tab label="Boys">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-3 mt-5" *ngFor="let men of mensP; let i = index"> -->
+          <mat-card align="center" class="col-md-3 col-sm-12 mt-5 cards" *ngFor="let boy of boysP; let i = index">
+            <mat-card-title>
+              <div style="background:url(../../../assets/images/categories/boys/shirt.jpeg);background-size: cover;background-repeat: no-repeat;background-position: center center;display: block; width: 100%;height: 150px;margin: 0 auto;"></div>
+            </mat-card-title>
+            <mat-card-content>
+              <h2 style="font-weight:lighter;">{{ boy.name }}</h2>
+              <p> {{ boy.description }} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn" (click)="removeBoyNumber(i);">-</button>
+              <span class="number"> {{ boy.value }} </span>
+              <button mat-button class="btn" (click)="addBoyNumber(i);">+</button>
+              <span class="price">₦{{ boy.price }}</span>
+            </mat-card-actions>
+          </mat-card>
+        <!-- </div> -->
+      </div>
+    </div> 
+    <!-- So Card Bottom Can show -->
+    <div style="margin-top:1em;"></div>
+  </mat-tab>
+
+  <!-- Tabs For Beddings -->
+  <mat-tab label="Beddings">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-md-3 mt-5" *ngFor="let men of mensP; let i = index"> -->
+          <mat-card align="center" class="col-md-3 col-sm-12 mt-5 cards" *ngFor="let bed of bedsP; let i = index">
+            <mat-card-title>
+              <div style="background:url(../../../assets/images/categories/beddings/pillow_case.jpeg);background-size: cover;background-repeat: no-repeat;background-position: center center;display: block; width: 100%;height: 150px;margin: 0 auto;"></div>
+            </mat-card-title>
+            <mat-card-content>
+              <h2 style="font-weight:lighter;">{{ bed.name }}</h2>
+              <p> {{ bed.description }} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="btn" (click)="removeBedNumber(i);">-</button>
+              <span class="number"> {{ bed.value }} </span>
+              <button mat-button class="btn" (click)="addBedNumber(i);">+</button>
+              <span class="price">₦{{ bed.price }}</span>
+            </mat-card-actions>
+          </mat-card>
+        <!-- </div> -->
+      </div>
+    </div> 
+    <!-- So Card Bottom Can show -->
+    <div style="margin-top:1em;"></div>
+  </mat-tab> 
+</mat-tab-group>
+
+<div class="cart">
+  <button mat-button class="bt">
+    <p class="txt"><mat-icon>shopping_cart</mat-icon> Cart ({{ counter }})</p>
+  </button>
+</div>
+
+  <app-footer></app-footer>
+</app-navigation>

@@ -1,0 +1,16 @@
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  display: inline-block;
+  font-family: 'Roboto', 'Times New Roman', Times, serif;
+}
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.brand {
+  font-family: 'Dancing Script', cursive; 
+  font-size: 1.5em;
+}

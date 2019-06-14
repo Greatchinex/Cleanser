@@ -1,0 +1,18 @@
+footer {
+    min-height: 10em;
+    background: #ff4081;
+}
+
+.fonts {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+strong {
+    font-family:  'Dancing Script', cursive;
+    font-size: 2em;
+}
